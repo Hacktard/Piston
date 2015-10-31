@@ -1,0 +1,38 @@
+//Made by H4xt4rD
+//Made on 31/10/15
+
+#include <iostream.h>
+using namespace std;
+
+//A file for sole purpose of mathematical calculations
+
+int odd(){                            //Function for finding whether a number is even or odd
+  int a;
+  cout << "Enter your number please\n";
+  cin >> a;
+  if(a%2==0){
+    cout << "Your number is even\n";
+  }
+  else{
+    cout << "Your number is odd\n";
+  }
+  return 0;
+}
+
+int factor(){                       //Lists out all the factors of a certain entered number
+  int a,b;
+  cout << "Enter your number\n";
+  cin >> a;
+  b = 1;
+  while(a>= b){
+    if(a%b ==1){
+      print b;
+      b = b+1;
+    }
+    else{
+      b = b+1;
+    }
+  }
+  return 0;
+}
+
