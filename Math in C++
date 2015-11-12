@@ -1,38 +1,40 @@
-//Made by H4xt4rD
-//Made on 31/10/15
+//made by H4xt4rd
 
-#include <iostream.h>
+#include <iostream>
 using namespace std;
 
-//A file for sole purpose of mathematical calculations
-
-int odd(){                            //Function for finding whether a number is even or odd
-  int a;
-  cout << "Enter your number please\n";
-  cin >> a;
-  if(a%2==0){
-    cout << "Your number is even\n";
-  }
-  else{
-    cout << "Your number is odd\n";
-  }
-  return 0;
+int gcd(int a,int b){                         //Finds greatest common divisor of the input numbers
+    int tempval, gcd;
+    tempval = 1;
+    while(tempval<=a && tempval<=b){
+        if(a%tempval==0 && b%tempval==0){
+            gcd = tempval;
+            tempval = tempval + 1;
+            return gcd;
+        }
+        else{
+            tempval = tempval+1;
+        }
+    }
+    cout << gcd;
 }
 
-int factor(){                       //Lists out all the factors of a certain entered number
-  int a,b;
-  cout << "Enter your number\n";
-  cin >> a;
-  b = 1;
-  while(a>= b){
-    if(a%b ==1){
-      print b;
-      b = b+1;
+int factorial(int x){
+    int product;
+    product = 1;
+    if(x>1){
+        while(x>1){
+            product = product*x;
+            x = x-1;
+            return product;
+        }
+    }
+    else if(x ==1 || x==0){
+        product =1;
+        return product;
     }
     else{
-      b = b+1;
+        cout << "Invalid Input"
     }
-  }
-  return 0;
+    cout << product;
 }
-
